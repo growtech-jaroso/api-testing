@@ -1,0 +1,28 @@
+meta {
+  name: Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{API_URL}}/auth/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "usuario@gmail.com",
+    "password": "12345678"
+  }
+}
+
+script:post-response {
+  const data = res.body
+  
+  const token = data?.data?.token
+  
+  if (!token) return
+  
+  bru.setEnvVar("AUTH_TOKEN", data.data.token)
+}

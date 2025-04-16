@@ -1,0 +1,30 @@
+meta {
+  name: Register
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{API_URL}}/auth/register
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "username": "usuario",
+    "email": "usuario@gmail.com",
+    "password": "12345678",
+    "confirm_password": "12345678"
+  }
+}
+
+script:post-response {
+  const data = res.body
+  
+  const token = data?.data?.token
+  
+  if (!token) return
+  
+  bru.setEnvVar("AUTH_TOKEN", data.data.token)
+}
