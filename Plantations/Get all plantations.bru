@@ -1,0 +1,16 @@
+meta {
+  name: Get all plantations
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{API_URL}}/plantations?limit=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  limit: 2
+  ~page: 1
+}
