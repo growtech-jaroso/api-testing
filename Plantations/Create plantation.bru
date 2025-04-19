@@ -1,0 +1,23 @@
+meta {
+  name: Create plantation
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{API_URL}}/plantations
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Plantación 1",
+    "country": "España",
+    "province": "Almería",
+    "city": "Cuevas del almanzora",
+    "description": "Plantación de prueba en Cuevas del almanzora",
+    "type": "Tomates",
+    "user_email": "usuario@gmail.com"
+  }
+}
