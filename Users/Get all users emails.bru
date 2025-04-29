@@ -1,0 +1,11 @@
+meta {
+  name: Get all users emails
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{API_URL}}/users/emails
+  body: none
+  auth: inherit
+}
