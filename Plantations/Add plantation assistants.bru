@@ -1,0 +1,17 @@
+meta {
+  name: Add plantation assistants
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{API_URL}}/plantations/6814d3d4ac78b5147aafded5/assistants
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "manager_email": "manager1@gmail.com"
+  }
+}
