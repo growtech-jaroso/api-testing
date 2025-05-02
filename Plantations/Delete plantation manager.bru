@@ -1,0 +1,17 @@
+meta {
+  name: Delete plantation manager
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{API_URL}}/plantations/6814deeed9f5037c66563bed/assistants
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "manager_email": "manager@gmail.com"
+  }
+}
