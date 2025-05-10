@@ -1,0 +1,18 @@
+meta {
+  name: Edit plantation info
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{API_URL}}/plantations/6817d138956ba45d1e21f877
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Plantación 3",
+    "type": "Lechugas" 
+  }
+}

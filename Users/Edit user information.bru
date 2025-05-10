@@ -5,7 +5,17 @@ meta {
 }
 
 put {
-  url: {{API_URL}}/users/681771272fbece3c26b5c24b
-  body: none
+  url: {{API_URL}}/users/681d1b74d009fa169b91f445
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+    "username": "usuari",
+    "email": "usuari@gmail.com",
+    "password": "",
+    "confirm_password": "",
+    "role": "user"
+  }
 }

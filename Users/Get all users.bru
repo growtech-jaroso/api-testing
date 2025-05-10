@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{API_URL}}/users?page=1&limit=10
+  url: {{API_URL}}/users?page=1&limit=10&username=us&email=usuari
   body: none
   auth: inherit
 }
@@ -13,4 +13,6 @@ get {
 params:query {
   page: 1
   limit: 10
+  username: us
+  email: usuari
 }
