@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{API_URL}}/plantations?limit=10&page=1&name=pl
+  url: {{API_URL}}/plantations?limit=10&page=1&search=pl&has_alerts=false
   body: none
   auth: inherit
 }
@@ -13,5 +13,6 @@ get {
 params:query {
   limit: 10
   page: 1
-  name: pl
+  search: pl
+  has_alerts: false
 }
