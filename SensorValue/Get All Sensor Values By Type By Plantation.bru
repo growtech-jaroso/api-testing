@@ -5,7 +5,12 @@ meta {
 }
 
 get {
-  url: {{API_URL}}/plantations/682230e449add36ebeaac933/sensors/temperature/values
+  url: {{API_URL}}/plantations/682230e449add36ebeaac933/sensors/type/temperature/values?before=2025-05-19T16:28:00.000Z&after=2025-05-19T17:28:00.000Z
   body: none
   auth: inherit
+}
+
+params:query {
+  before: 2025-05-19T16:28:00.000Z
+  after: 2025-05-19T17:28:00.000Z
 }
