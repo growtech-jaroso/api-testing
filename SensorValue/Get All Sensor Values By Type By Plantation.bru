@@ -1,0 +1,11 @@
+meta {
+  name: Get All Sensor Values By Type By Plantation
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{API_URL}}/plantations/682230e449add36ebeaac933/sensors/temperature/values
+  body: none
+  auth: inherit
+}
