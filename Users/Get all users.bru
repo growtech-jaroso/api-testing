@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{API_URL}}/users?page=1&limit=10&search=usuario@&role=admin
+  url: {{API_URL}}/users?page=1&limit=10
   body: none
   auth: inherit
 }
@@ -13,6 +13,6 @@ get {
 params:query {
   page: 1
   limit: 10
-  search: usuario@
-  role: admin
+  ~search: usuario@
+  ~role: admin
 }
