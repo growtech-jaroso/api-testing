@@ -1,0 +1,11 @@
+meta {
+  name: Get All Plantations By User Id
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{API_URL}}/plantations/owners/{user_id}
+  body: none
+  auth: inherit
+}
