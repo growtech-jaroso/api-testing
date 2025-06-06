@@ -12,20 +12,10 @@ post {
 
 body:json {
   {
-    "username": "usuario3",
-    "email": "usuario3@gmail.com",
+    "username": "usuario",
+    "email": "usuario@gmail.com",
     "password": "12345678",
     "confirm_password": "12345678",
     "role": "user"
   }
-}
-
-script:post-response {
-  const data = res.body
-  
-  const token = data?.data?.token
-  
-  if (!token) return
-  
-  bru.setEnvVar("AUTH_TOKEN", data.data.token)
 }
