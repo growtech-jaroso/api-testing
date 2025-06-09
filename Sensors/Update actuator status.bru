@@ -1,0 +1,17 @@
+meta {
+  name: Update actuator status
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{API_URL}}/plantations/6846b01431baf40e0eee56cd/sensors/6846b04f31baf40e0eee56cf/actuator/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "status": "off"
+  }
+}
